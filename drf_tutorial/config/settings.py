@@ -26,8 +26,15 @@ SECRET_KEY = ')msg$akpahwwer1opnnh)^p@5bz!9#eqln_@k5-ve5-8!d+(g2'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
+#
+# REST_FRAMEWORK = {
+#     'DEFAULT_RENDERER_CLASSES': (
+#         'rest_framework.renderers.JSONRenderer',
+#         'rest_framework.renderers.BrowsableAPIRenderer',
+#         'rest_framework_xml.renderers.XMLRenderer',
+#
+#     ),
+# }
 # Application definition
 
 INSTALLED_APPS = [
