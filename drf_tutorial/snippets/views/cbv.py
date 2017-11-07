@@ -1,8 +1,5 @@
 from django.contrib.auth.models import User
-from django.http import Http404
-from rest_framework import status, mixins, generics, permissions
-from rest_framework.response import Response
-from rest_framework.views import APIView
+from rest_framework import generics, permissions
 
 from snippets.models import Snippet
 from snippets.permissions import IsOwnerOrReadOnly
@@ -23,6 +20,7 @@ class SnippetDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = SnippetSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,
                           IsOwnerOrReadOnly,)
+
 
 class UserList(generics.ListAPIView):
     queryset = User.objects.all()
